@@ -57,7 +57,7 @@ main .skill .skillImgBox {
 }
 
 main .skill .skillImgBox:hover {
-  transform: scale(1.05);
+  transform: translateY(1vh);
 }
 
 main .skill .skillImgBox h3 {
@@ -83,7 +83,7 @@ main .skill .controlImgBox {
 }
 
 main .skill .controlImgBox:hover {
-  transform: scale(1.05);
+  transform: translateY(1vh);
 }
 
 main .skill .controlImgBox h3 {

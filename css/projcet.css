@@ -37,17 +37,17 @@ main .project h1 {
   padding-bottom: 3rem;
 }
 
-main .project .projectList {
-  position: relative;
+main .project .projectTap {
   overflow: hidden;
+  position: relative;
 }
 
-main .project .projectSlider {
+main .project .projectPage {
   display: flex;
   transition: transform 0.4s;
 }
 
-main .project .projectPage {
+main .project .projectSlide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,17 +56,17 @@ main .project .projectPage {
   position: relative;
 
   background-color: white;
-  border-radius: 1rem;
+  height: 50vh;
 }
 
-main .project .projectPage .projcetTitle {
+main .project .projectSlide .projcetTitle {
   font-size: 2rem;
   padding-top: 1rem;
 
   color: skyblue;
 }
 
-main .project .projectPage .projectWrapper {
+main .project .projectSlide .projectWrapper {
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-content: space-around;
@@ -76,16 +76,16 @@ main .project .projectPage .projectWrapper {
   padding: 0 2rem;
 }
 
-main .project .projectPage .projectImg {
+main .project .projectSlide .projectImg {
   padding: 1rem;
 }
 
-main .project .projectPage .projectImg h4 {
+main .project .projectSlide .projectImg h4 {
   padding: 1rem 0;
   background-color: rgb(230, 230, 230);
 }
 
-main .project .projectPage img {
+main .project .projectSlide img {
   width: 25vw;
   height: 25vh;
 }

@@ -1,5 +1,5 @@
 //main Text Event
-const introText = document.querySelectorAll(".mainTitle, span, p");
+const introText = document.querySelectorAll(".mainTitle, span, button");
 window.onload = () => {
   setTimeout(function () {
     let timer = 100;
@@ -10,58 +10,73 @@ window.onload = () => {
 };
 
 // Scroll Opacity Event
-let aboutSection = document.querySelector(".about");
-let mainpage = document.querySelector(".mainpage");
-let skillPage = document.querySelector(".skill");
-
-window.addEventListener("scroll", (e) => {
-  // console.log(window.scrollY);
-  const rect = aboutSection.getBoundingClientRect();
-
-  const opacity = (-rect.top + rect.height / 2) / 300;
-
-  const mainOpacity = (rect.top - rect.height / 2) / 300;
-
-  const skillOpacity = ((rect.top + rect.height / 2) / 300) * -1;
-
-  mainpage.style.opacity = mainOpacity;
-  aboutSection.style.opacity = opacity;
-  skillPage.style.opacity = skillOpacity;
-});
-
-// const sectionList = document.querySelector("section");
+// let aboutSection = document.querySelector(".about");
+// let mainpage = document.querySelector(".mainpage");
+// let skillPage = document.querySelector(".skill");
 
 // window.addEventListener("scroll", (e) => {
-//   let opacity =
-//     (Math.cos(
-//       ((90 / window.innerHeight) * 4 * window.scrollY * Math.PI) / 100
-//     ) +
-//       1) /
-//     2;
+//   // console.log(window.scrollY);
+//   const rect = aboutSection.getBoundingClientRect();
 
-//   console.log(opacity);
+//   const opacity = (-rect.top + rect.height / 2) / 300;
 
-//   sectionList.forEach((section) => {
-//     sectionList.querySelector("h2").style.opacity = opacity;
-//   });
+//   const mainOpacity = (rect.top - rect.height / 2) / 300;
+
+//   const skillOpacity = ((rect.top + rect.height / 2) / 300) * -1;
+
+//   mainpage.style.opacity = mainOpacity;
+//   aboutSection.style.opacity = opacity;
+//   skillPage.style.opacity = skillOpacity;
 // });
+
+const sectionList = document.querySelectorAll(".item");
+
+window.addEventListener("scroll", (e) => {
+  let opacity =
+    Math.abs(
+      Math.cos(((90 / window.innerHeight) * window.scrollY * Math.PI) / 180)
+    ) *
+      4 -
+    3;
+
+  let opacity02 =
+    Math.abs(
+      Math.cos(
+        (((90 / window.innerHeight) * window.scrollY + 90) * Math.PI) / 180
+      )
+    ) *
+      4 -
+    3;
+
+  console.log(opacity02);
+
+  sectionList.forEach((section, idx) => {
+    let value = idx % 2 === 0 ? opacity : opacity02;
+    section.style.opacity = value;
+  });
+});
 
 // Project Slide Event
 
 let slideWrapper = document.querySelector(".projectPage");
-let btnSlideList = document.querySelectorAll(".btnSlide");
+let btnNext = document.querySelector(".btnSlide.next");
+let btnPrev = document.querySelector(".btnSlide.prev");
 
 let index = 0;
 
-function changeSlide(num) {
-  index = num;
-  slideWrapper.style.transform = `translate(${index * -100}%)`;
-}
-
-btnSlideList.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    let indexNum = parseInt(e.target.dataset.index);
-    if (indexNum + index < 0 || indexNum + index > 1) return;
-    changeSlide(index + indexNum);
-  });
+btnNext.addEventListener("click", () => {
+  console.log(index, slideWrapper);
+  if (index < 1) {
+    index++;
+    slideWrapper.style.transform = `translate(${index * -55}vw)`;
+  }
 });
+
+btnPrev.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    slideWrapper.style.transform = `translate(${index * -55}vw)`;
+  }
+});
+
+let;
