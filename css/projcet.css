@@ -37,8 +37,14 @@ main .project h1 {
   padding-bottom: 3rem;
 }
 
+main .project .projectList {
+  position: relative;
+  overflow: hidden;
+}
+
 main .project .projectSlider {
   display: flex;
+  transition: transform 0.4s;
 }
 
 main .project .projectPage {
@@ -47,6 +53,7 @@ main .project .projectPage {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  position: relative;
 
   background-color: white;
   border-radius: 1rem;
@@ -103,4 +110,31 @@ main .project .projectText p + p {
   border-top: 1px solid grey;
 
   padding: 1rem 0;
+}
+
+main .project .btnSlide {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 45vh;
+  transform: translateY(-50%);
+
+  background: none;
+  border: none;
+  border-radius: 50%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 30px;
+  height: 30px;
+
+  font-size: 2rem;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+main .project .btnSlide.next {
+  right: 22vw;
 }
