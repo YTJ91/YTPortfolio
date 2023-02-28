@@ -1,5 +1,5 @@
 main .about {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   position: relative;
@@ -11,7 +11,7 @@ main .about {
 }
 
 main .about::after {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   content: "";
   background: url(../img/about.jfif);

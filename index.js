@@ -48,8 +48,6 @@ window.addEventListener("scroll", (e) => {
       4 -
     3;
 
-  console.log(opacity02);
-
   sectionList.forEach((section, idx) => {
     let value = idx % 2 === 0 ? opacity : opacity02;
     section.style.opacity = value;
@@ -79,4 +77,8 @@ btnPrev.addEventListener("click", () => {
   }
 });
 
-let;
+// nav scroll
+function goToScroll(name) {
+  var location = document.querySelector("." + name).offsetTop;
+  window.scrollTo({ top: location, behavior: "smooth" });
+}

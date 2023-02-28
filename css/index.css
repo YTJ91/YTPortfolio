@@ -74,6 +74,11 @@ header nav button {
 
   border: 0;
   outline: 0;
+
+  color: white;
+  background-color: inherit;
+
+  cursor: pointer;
 }
 
 main {
@@ -83,7 +88,7 @@ main {
 }
 
 main .mainpage {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   position: relative;
@@ -92,7 +97,7 @@ main .mainpage {
 }
 
 main .mainpage::before {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   content: "";
   background: url(../img/main.jpg);

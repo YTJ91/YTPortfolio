@@ -1,5 +1,5 @@
 main .project {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   position: relative;
@@ -11,7 +11,7 @@ main .project {
 }
 
 main .project::after {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   content: "";
   background: url(../img/project.png);
@@ -56,7 +56,7 @@ main .project .projectSlide {
   position: relative;
 
   background-color: white;
-  height: 50vh;
+  height: 60vh;
 }
 
 main .project .projectSlide .projcetTitle {
@@ -118,7 +118,7 @@ main .project .btnSlide {
   justify-content: center;
   align-items: center;
 
-  top: 45vh;
+  top: 50vh;
   transform: translateY(-50%);
 
   background: none;
@@ -126,8 +126,8 @@ main .project .btnSlide {
   border-radius: 50%;
 
   background-color: rgba(0, 0, 0, 0.4);
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
 
   font-size: 2rem;
   color: #fff;
